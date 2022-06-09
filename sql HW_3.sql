@@ -332,63 +332,6 @@ select *from roles_employee ;
 
 HW_3
 
-create table City(
-         id serial ,
-         title varchar (30)
-)
-
-insert into City (title)
-values ('Warsaw'),
-       ('Dubai'),
-       ('Budapest'), 
-       ('New York'); 
-      
-select *from City;
-
-create table Persons(
-       person_name varchar(80),
-       city_id int
-);
-
-insert into Persons (person_name, city_id)
-values ('Alex',2),
-       ('Dmity',4),
-       ('Vadim',2),
-       ('Anna',1),
-       ('Victor',5),
-       ('Natalia',3),
-       ('Sergey',1),
-       ('Tanya',6);
-      
-insert into Persons (person_name, city_id)
-values ('Alena',12),
-       ('Darya',9);
-      
-select *from Persons ;    
-
-select *from Persons join City 
-on Persons.city_id = City.id;
-
-select *from Persons left join City 
-on Persons.city_id = City.id 
-
-insert into City (title)
-values ('Krakuw'),
-       ('Istambul');
-      
-update City
-set title ='Krakow'
-where title = 'Krakuw';
-
-insert into City (title)
-values ('Gdansk'),
-       ('Larnaka');
-
-select *from Persons right join City 
-on Persons.city_id = City.id;
-
-select *from Persons full join City 
-on Persons.city_id = City.id;
 
 select *from roles 
 join roles_salary on roles.id = roles_salary.id_role 
